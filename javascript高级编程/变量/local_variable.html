@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+    <script type="text/javascript">
+    	var color = 'red';
+    	function getColor(){
+    		var color = 'blue';
+    		return color;
+    	}
+
+    	alert(getColor());		//优先从局部变量判断，找到color局部变量后停止
+    </script>
+</head>
+<body>
+</body>
+</html>
+

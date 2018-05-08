@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+	   function Person(name,age){
+			this.name = name;
+			this.age = age;
+	   }
+
+	   Person.prototype = {
+	   	sayName:function(){
+	   		console.log("My name is " + this.name);
+	   	}
+	   }
+
+	   var friend = new Person("jack","18");
+	   console.log(friend.name);
+	   console.log(friend.age);
+	   friend.sayName();
+
+
+	   console.log("-------------------------------------------------")
+	   console.log(friend.__proto__ === Person.prototype);					//实例对象的 __proto__ 指向函数对象的原型
+	   console.log(Person.__proto__ === Function.prototype);				//所有函数对象的 __proto__ 都指向 Function.prototype，它是一个空函数（Empty function）
+	   console.log(Person.prototype.__proto__ === Object.prototype);		//函数对象的原型的 __proto__指向Object的原型
+	   console.log(Object.prototype.__proto__ === null);					//Object的原型的 __proto__指向Null
+
+	    // 实例对象的__proto__ 是 类（function）的原型
+		// 类（function）的__proto__是类（function）的原型
+		// 类的原型的__proto__是object的原型
+		// object的原型的__proto__是null
+
+	    // object的原型指向null
+		// 类（function）的原型指向object的原型
+		// funtion指向function的原型
+		// 实例指向function的原型
+
+
+
+	   //__proto__就是一个无形的指针
+	   //__proto__像是桥梁，通过__proto__链式链接原型链
+	   //prototype显式原型，__proto__隐式原型
+	   //可以把__proto__理解为“指向”，“=>”
+
+    </script>
+</head>
+<body>
+</body>
+</html>
+

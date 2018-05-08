@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+	   	var animal = function(){};
+ 		var dog = function(){};
+ 		animal.price = 2000;	//这样理解，animal是dog函数类的原型，tidy是dog函数类的实例，实例对象的 __proto__ 指向函数对象的原型。所以tidy的__proto__指向animal，所以tidy的价格是2000,而不是animal的价格是2000.
+ 		dog.prototype = animal;
+ 		var tidy = new dog();
+ 		console.log(dog.price) //undefined
+ 		console.log(tidy.price) // 2000
+
+    </script>
+</head>
+<body>
+</body>
+</html>
+

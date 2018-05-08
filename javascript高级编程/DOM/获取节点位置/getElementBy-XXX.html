@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+    	.DomClass{
+    		width: 100px;
+    		height: 100px;
+    		background-color: aqua;
+    		display: block;
+    		margin: auto;
+    		margin-top: 10px;
+    	}
+    	#DomId{
+    		width: 200px;
+    		height: 200px;
+    		background-color: red;
+    		margin: auto;
+    	}
+    </style>
+</head>
+<body>
+	<div id="DomId"></div>
+
+	<div class="DomClass"></div>
+	<div class="DomClass"></div>
+	<div class="DomClass"></div>
+	<div class="DomClass"></div>
+
+	<script type="text/javascript">
+		var IdDom = document.getElementById("DomId");			 	 //获取的是id为IdDom的元素
+		IdDom.innerHTML = "Id已经被添加";
+		var ClassDom = document.getElementsByClassName("DomClass");	 //获取的是一个nodelist数组，是包括所有class为DomClass的类的元素
+
+
+		// 如何遍历class的数组,添加监听事件也是类似，另外getElementByTagName也是类似获取数组
+		var ClassDom_length = ClassDom.length;
+		for(var i = 0 ; i < ClassDom_length ; i++){
+			ClassDom[i].innerHTML = "class已经被添加";
+		}
+	</script>
+</body>
+</html>
+

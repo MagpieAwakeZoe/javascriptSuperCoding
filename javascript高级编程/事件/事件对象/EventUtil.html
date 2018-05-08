@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../../Utils/EventUtil.js"></script>
+</head>
+<body>
+ <button id="btn">按钮</button>
+  <script type="text/javascript">
+     var btn=document.getElementById("btn");
+     var handler=function(){
+     alert("Clicked!");
+  };
+     EventUtil.addHandler(btn,"click",handler);  //调用已定义的EventUtil对象
+     //解除绑定:EventUtil.removeHandler(btn,"click",hanlder);
+     //阻止默认事件:EventUtil.addHandler(link,"click",handler);
+     //阻止捕获和冒泡:EventUtil.stopPropagation(event); //重点语句
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+		// 匿名函数方式创建私有作用域
+		function outputNumber(count){
+			for(var i = 0 ; i < count ; i++){
+				console.log(i);			//0~9
+			}
+			var i;						//重新声明变量
+			console.log(i);				//10，照理说i是在for循环外后再声明的，之前的for循环里的i会被销毁，这里忽视了之后声明的i
+		}
+		outputNumber(10);
+		console.log("-----------------------------------------------------------------------");
+    </script>
+
+    <script type="text/javascript">
+    	//使用匿名函数避免这个错误
+    	function outputNumber(count){
+			(function(){				//在匿名函数中定义的任何变量会在执行结束的时候被销毁，所以变量i只能在for循环里使用
+				for(var i = 0; i < count; i++){
+					console.log(i);
+				}
+			})();
+					var i;
+					console.log(i);		//正常报错,显示undefined
+		}
+		outputNumber(10);
+    </script>
+</head>
+<body>
+</body>
+</html>
+

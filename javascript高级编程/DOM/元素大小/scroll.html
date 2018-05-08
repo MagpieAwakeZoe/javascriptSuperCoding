@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #scroll{
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          top: 100px;
+          left: 600px;
+          overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="scroll">
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+      pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+    </div>
+    <script type="text/javascript">
+      var scroll = document.getElementById("scroll");
+      console.log(scroll.scrollWidth);          //777 所有的包括看不到的区域的宽度(包括视口)
+      console.log(scroll.scrollHeight);         //749 所有的包括看不到的区域的高度(包括视口)
+      console.log(scroll.scrollTop);            //0   初始位置是没有动过的，故而是0  scrollHeight - 内容区域(不包括border包括padding)
+      console.log(scroll.scrollLeft);           //0   初始位置是没有动过的，故而是0  scrollWidth - 内容区域(不包括border包括padding)
+    </script>
+</body>
+</html>
+

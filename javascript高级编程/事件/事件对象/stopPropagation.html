@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+ <button id="btn">按钮</button>
+  <script type="text/javascript">
+      var btn = document.getElementById("btn");
+      btn.onclick = function(event){
+        alert("clicked");
+        event.stopPropagation();            //stopPropagation()用于阻止事件的传播(冒泡或者捕获),取消进一步的事件冒泡和捕获(只有在cancleable属性是true的时候才能使用)
+                                            // 默认事件仍然会执行
+      };
+
+      document.body.onclick = function(evnet){
+        alert("Body alert");
+      }
+  </script>
+</body>
+</html>
+

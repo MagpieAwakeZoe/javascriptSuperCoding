@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方括号</title>
+    <script type="text/javascript">
+
+        // concat
+        var color = Array("red","blue","green");
+        var color1 = Array("black","white","pink");
+        var color2 = color.concat(color1);                              //给原数组添加数组
+        console.log(color);
+        console.log(color2);
+        console.log("----------------------------------------------------------");
+        // slice
+        var color3 = Array("red","blue","green","black","white");
+        var color4 = color3.slice(1,4);                                 //从原数组里保留第二至第四个元素，其余去除
+        var colorX = color3.slice(1);                                   //去除第一个元素，保留后面所有   
+        console.log(color3);
+        console.log(color4);      
+        console.log(colorX);
+        console.log("----------------------------------------------------------");
+        // splice
+        var color5 = ["red","green","blue"];
+        console.log(color5)
+        // 删除
+        var remove = color5.splice(0,1);                                //删除第一项的位置[0]和数量1
+        console.log(color5);                    
+
+
+        // 插入
+        var insert = color5.splice(1,0,"yellow","orange");              //从位置[1]开始插入两项,删除0项
+        console.log(color5);
+
+
+        // 组合
+        var change = color5.splice(1,1,"red","purple");                 //删除一项从[1]开始，再插入两项，
+        console.log(color5);
+    </script>
+</head>
+<body>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    //book对象
+      var book = {
+        title:"title1",
+        authors:[
+            "Niko",
+            "Jack",
+            "bob"
+        ],
+        year:21
+      }
+
+      //将book对象序列化为一个字符串
+      var jsonText = JSON.stringify(book,["title","year"]);   //JSON.stringify(obj,["key1","key2"]);   
+      console.log(jsonText);      //{"title":"title1","year":21}
+      //p589
+  </script>
+</body>
+</html>
+

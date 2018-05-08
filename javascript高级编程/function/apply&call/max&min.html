@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //number 本身没有 max 方法，但是 Math 有，我们就可以借助 call 或者 apply 使用其方法。
+        var numbers =[12,32,43,23,56];
+        var maxInnumbers = Math.max.apply(Math,numbers);
+        var maxInnumbers = Math.max.call(Math,12,32,43,23,56);
+        var minInnumbers = Math.min.apply(Math,numbers);
+        var minInnumbers = Math.min.call(Math,12,32,43,23,56);
+        console.log(maxInnumbers);
+        console.log(minInnumbers);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="EventUtil.js"></script>
+</head>
+<body>
+  <div>
+    <button id="btn">按钮</button>
+  </div>
+
+  <script type="text/javascript">
+    var handle = {
+      message:"this is a message",
+
+      handleClick:function(){
+        console.log(this.message);
+      }
+    }
+
+    var btn = document.getElementById("btn");
+    EventUtil.addHandler(btn,"click",handle.handleClick.bind(handle));
+        //要绑定的函数.bind(要绑定的对象)
+  </script>
+</body>
+</html>
+

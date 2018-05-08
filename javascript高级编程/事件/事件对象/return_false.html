@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <div id="box">
+  <a id="href" style="background-color: red" href="http://www.baidu.com">
+    链接
+  </a>
+  </div>
+
+  <script type="text/javascript">
+      var box = document.getElementById("box");
+      var href = document.getElementById("href");
+      box.onclick = function(event){   //a标签的默认点击行为是跳转到指定的网站
+          console.log("1");
+       }
+      href.onclick = function(event){
+        return false;
+      }
+
+       //页面不会跳转，也不会打印出1，等于同时调用了event.stopPropagation()和event.preventDefault()  
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="contentarea">
+      <p>Some <span>text</span></p>
+      <b>Bold text</b>
+    </div>
+      <script type="text/javascript">
+        var contentarea = document.getElementById("contentarea");
+        var walker = document.createTreeWalker(contentarea,NodeFilter.SHOW_ELEMENT,null,false);
+        var firstChild = walker.firstChild();       //firstChild选取当前节点的第一个子元素
+        firstChild.style.cssText = "color:red";       
+        //另外parentNode()  遍历到当前的父节点
+        //lastChild()       遍历到当前的最后一个子节点
+        //nextSibling()     遍历到当前的下一个同辈节点
+        //previousSibling   遍历到当前的上一个同辈节点
+        
+      </script>
+</body>
+</html>
+

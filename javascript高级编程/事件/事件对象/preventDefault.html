@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <a id="href" style="background-color: red" href="http://www.baidu.com">
+    链接
+  </a>
+
+
+  <script type="text/javascript">
+      var href = document.getElementById("href");
+      href.onclick = function(event){   //a标签的默认点击行为是跳转到指定的网站
+        event.preventDefault();   //阻止默认事件，href跳转到百度页面被阻止了，只有在cancleable属性是true的时候才能使用
+                                    // 会发生冒泡，冒泡会传递到上一层的父元素
+      }
+  </script>
+</body>
+</html>
+

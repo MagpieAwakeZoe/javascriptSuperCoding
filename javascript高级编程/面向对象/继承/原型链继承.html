@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+		//定义一个 Animal 构造函数，作为 Dog 的父类
+		function Animal () {
+		    this.superType = 'Animal';
+		}
+
+		Animal.prototype.superSpeak = function () {
+		    alert(this.superType);
+		}
+
+		function Dog (name) {
+		    this.name = name;
+		    this.type = 'Dog';  
+		}
+		//改变Dog的prototype指针，指向一个 Animal 实例
+		Dog.prototype = new Animal();
+		//上面那行就相当于这么写
+		//var animal = new Animal();
+		//Dog.prototype = animal;
+
+		Dog.prototype.speak = function () {
+		　　alert(this.type);
+		}
+		var doggie = new Dog('jiwawa');
+		doggie.superSpeak();  //Animal 
+
+
+		//做以下的分析
+		//定义了一个Animal构造函数
+		//Animal的原型有一个superSpeak函数
+		//狗(Dog)也有一个构造方法
+		//狗(Dog)的原型是Animal的一个实例
+		//狗(Dog有一个原型方法)speak
+		//doggie是狗(Dog)的实例化
+		//doggie.superSpeak();
+		//实例里分析没有superSpeak()这个函数
+		//根据原型链向上找
+		//根据这句话--Dog.prototype = new Animal();
+		//知道了Animal()，然而这个Animal()没有superSpeak()，
+		//继续原型链向上找
+		//Animal的原型，根据这句话Animal.prototype.superSpeak(),
+		//找到了方法，输出。
+    </script>
+</head>
+<body>
+</body>
+</html>
+

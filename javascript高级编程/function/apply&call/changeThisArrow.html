@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apply和call详解</title>
+</head>
+<body>
+<script>
+    var func = function (A,B) {
+        console.log(A + '' + this.name + '' + B);    //这里的this的指向将要被apply改变
+    };
+    var obj = {
+        name:'magpieawake'
+    };
+
+    func.apply(obj , ['A','B']);
+    //方法.apply(对象.['参数1'，'参数2']);
+    //函数 func 中 this 指向了 obj 这个对象
+
+</script>
+
+<!--apply和call都用来改变this的指向-->
+<!--返回值是函数(包括bind)-->
+
+<script>
+    var func = function (C,D) {
+        console.log(C + '' + this.name + '' + D);    //这里的this的指向将要被call改变
+    };
+    var obj = {
+        name:'MAGPIEAWAKE'
+    };
+    func.call(obj ,'C','D');    //单独作为参数传给func.
+</script>
+</body>
+</html>

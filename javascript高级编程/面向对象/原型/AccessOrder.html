@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+	   // 添加属性到原型对象里
+	   //所有对象实例共享原型对象包含的属性和方法
+	   function Person(){}
+	   	Person.prototype.name = "Jack";
+	   	Person.prototype.age = 29;
+	   	Person.prototype.job = "Software";
+	   	Person.prototype.sayName = function(){
+	   		console.log(this.name);
+	   	}
+
+	   	var Person1 = new Person();
+	 	Person1.name = "Greg";				//在实例里面修改属性，读取的时候顺序是先从实例读取name，实例没有这个属性再从原型里寻找
+	 	console.log(Person1.name);
+
+	   	var Person2 = new Person();
+	   	console.log(Person2.name);			//实例没有这个属性再从原型里寻找
+    </script>
+</head>
+<body>
+</body>
+</html>
+

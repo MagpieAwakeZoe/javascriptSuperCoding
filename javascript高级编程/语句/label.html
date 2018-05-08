@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语句</title>
+    <script type="text/javascript">
+    	 var num = 0;
+        for (var i = 0 ; i < 10 ; i++){
+             for (var j = 0 ; j < 10 ; j++){
+                  if( i == 5 && j == 5 ){
+                        break;
+                  }
+             num++;
+             }
+        }
+        alert(num); // 循环在 i 为5，j 为5的时候跳出 j循环，但会继续执行 i 循环，输出 95
+    </script>
+
+<!-- 使用label标签以便将来使用 -->
+
+    <script type="text/javascript">
+    	   var num = 0;
+    	 outPoint:
+    	 for (var i = 0 ; i < 10 ; i++){
+         for (var j = 0 ; j < 10 ; j++){
+              if( i == 5 && j == 5 ){
+                    break outPoint;
+              }
+         num++;
+         }
+    }
+    alert(num); // 循环在 i 为5，j 为5的时候跳出双循环，返回到outPoint层继续执行，输出 55
+    </script>
+</head>
+<body>
+</body>
+</html>

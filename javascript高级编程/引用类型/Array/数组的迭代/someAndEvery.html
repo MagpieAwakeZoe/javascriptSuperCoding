@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+    <script type="text/javascript">
+    	var number = Array(1,2,3,4,5,4,3,2,1);
+        var someRes = number.some(function(item,index,array){           //some是数组里有一个符合要求就会返回true
+            return (item>2);
+        });
+        console.log(someRes);
+
+
+        var everyRes = number.every(function(item,index,array){         //every是数组里必须所有的都符合要求才可以返回true
+            return (item>2);
+        });
+        console.log(everyRes);                                          //布尔值结果
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>
+

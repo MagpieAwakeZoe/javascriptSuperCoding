@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- <script type="text/javascript" src="EventUtil.js"></script> -->
+</head>
+<body>
+  <script type="text/javascript">
+      var person = {
+        name:"jack",
+        age:"18"
+      }
+      Object.seal(person);
+
+      person.addr = "china";
+      console.log(person.addr);         //seal禁止添加，禁止扩展
+      delete person.name;
+      console.log(person.name);         //正常打印，seal禁止删除，无视delete
+
+  </script>
+</body>
+</html>
+

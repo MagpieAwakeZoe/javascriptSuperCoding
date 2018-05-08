@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+    	var timer = null;
+    	var ini = 0;
+    	var max = 10;
+    	var timer = setInterval(function(){
+    		if(ini<max){				//判断是否大于Max
+    			ini++;					//大于max的话让ini++
+    			console.log(ini);
+    		}else{
+    			console.log("It's over");//否则就打印出It's over 
+    			clearInterval(timer);	//关闭间歇调用
+    		}
+    	},1000);						//1秒后出现打印内容，反复间隔1妙出现
+
+    	
+    </script>
+</head>
+<body>
+</body>
+</html>
+

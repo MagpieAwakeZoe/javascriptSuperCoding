@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="EventUtil.js"></script>
+    <style type="text/css">
+      #drag{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        margin-top: 40px;
+        margin: auto;
+        border: 1px solid black
+      }
+      #finTarget{
+         position: relative;
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        margin: auto;
+        border: 1px solid black
+      }
+    </style>
+</head>
+<body>
+    <div id="drag" draggable="true"></div> 
+    <div id="finTarget"></div>                   
+    <!-- 元素必须要有draggable = true 才能被拖拽，这个是前提 -->
+    <script type="text/javascript">
+        var drag = document.getElementById("drag");
+        drag.addEventListener("dragenter", function(event) {                //当被鼠标拖动的对象进入其容器范围内时触发此事件
+            if(event.target.id == "drag" ) {   
+                 event.target.style.border = "3px dotted red";   
+    }   
+}); 
+        drag.addEventListener("dragover", function(event) {                 //当某被拖动的对象在另一对象容器范围内拖动时触发此事件
+                 event.preventDefault();                                    // 默认情况下,数据/元素不能在其他元素中被拖放。对于drop我们必须防止元素的默认处理   
+});   
+        drag.addEventListener("dragleave", function(event) {                // 当被鼠标拖动的对象离开其容器范围内时触发此事件
+            if(event.target.id == "drag" ) {   
+        event.target.style.border = "";   
+    }   
+});   
+    </script>
+</body>
+</html>
+

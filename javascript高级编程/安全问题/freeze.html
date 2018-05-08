@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方括号</title>
+    <script type="text/javascript">
+        var person = {
+            name:"jack",
+            age:"19"
+        }
+        Object.freeze(person);      //freeze冻结对象，使得无法进行删除扩展操作
+
+        person.addr = "china";
+        console.log(person.addr);   //undefined
+        delete person.name;
+        console.log(person.name);   //jack
+
+    </script>
+</head>
+<body>
+</body>
+</html>
+

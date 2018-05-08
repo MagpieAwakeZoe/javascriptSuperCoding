@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+    <script type="text/javascript">
+    	var color1 =  new Array();                                   //不知道输出长度时候括号里空
+        var color2 =  new Array(20);                                 //知晓数组的长度
+        var color3 =  new Array("green","red","orange");             //  可以创建一个数组，里面的元素都知晓
+        var color4 =  Array();                                       //省略new也是可以的
+
+        console.log(color3[0]);                                      //访问数组color3的第一个元素
+        color3[2] = "black";                                         //修改数组color3的第三个元素
+        color3[3] = "brown";                                         //新增数组color3的第四个元素
+        console.log(color3);                                         //打印数组
+        console.log(color3.length);                                  //打印数组的长度
+    </script>
+</head>
+<body>
+</body>
+</html>
+

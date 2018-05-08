@@ -1,0 +1,34 @@
+//json对象
+{
+	"name":"niko",
+	"age":21,
+	"school":{
+		"name":"zjnu",
+		"addr":"ZJ"
+	}
+}
+
+
+//json数组
+[
+	{
+		"title":"title1",
+		"people":[
+			"jack",
+			"john",
+			"Bob"
+		],
+		"year":1990
+	},
+
+	{
+		"title":"title2",
+		"people":[
+			"mike",
+			"lucy",
+			"Alice"
+		],
+		"year":1997
+
+	}
+]

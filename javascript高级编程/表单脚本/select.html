@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="EventUtil.js"></script>
+</head>
+<body>
+    <div>
+      <form>
+        <input type="text" name="" value="这里的文字会被全部选中">
+      </form>
+    </div>
+    <script type="text/javascript">
+      // 文本获取焦点时候选中所有文本
+      var input = document.forms[0].elements[0];
+      EventUtil.addHandler(input,"focus",function(){
+          event = EventUtil.getEvent(event);
+          target = EventUtil.getTarget(event);
+          target.select();
+      }); 
+    </script>
+</body>
+</html>
+

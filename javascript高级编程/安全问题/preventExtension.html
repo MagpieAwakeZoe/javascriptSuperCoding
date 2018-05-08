@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- <script type="text/javascript" src="EventUtil.js"></script> -->
+</head>
+<body>
+  <script type="text/javascript">
+    var person = {
+      name:"jack",
+      age:"19"
+    }
+    person.sex = "male";                    //通过obj.value给对象添加属性
+    console.log(person);    
+
+    Object.preventExtensions(person);       //禁止person对象扩展,但是可以进行修改和添加
+    person.addr = "China";
+    console.log(person);                    //china并没有被添加到person
+  </script>
+</body>
+</html>
+

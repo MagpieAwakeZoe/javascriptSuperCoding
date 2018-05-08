@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+        function Person(){
+            this.sex = "male"
+        }
+
+        var friends = {
+            name:"jack",
+            thankYou:function(){
+                console.log("he is my best friends");
+            }
+        };
+
+        Person.prototype = friends;
+
+        var you = new Person();
+        you.thankYou();
+        console.log(you.__proto__ === Person.prototype);          //你的__proto__来自你构造函数的prototype
+        // __proto__是每个对象都有的一个属性，而prototype是函数才会有的属性。
+        // __proto__指向的是当前对象(实例“you”)的原型对象，而prototype指向的，是以当前函数作为构造函数构造出来的对象(Person)的原型对象。
+
+    </script>
+</head>
+<body>
+</body>
+</html>
+

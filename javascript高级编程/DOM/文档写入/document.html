@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document.write() Example</title>
+</head>
+<body>
+    <!-- document.write是直接将内容写入页面的内容流，会导致页面全部重绘，innerHTML将内容写入某个DOM节点，不会导致页面全部重绘 -->
+    <!-- document.write()实在页面中出入内容；如果不指定元素的话；它会覆盖掉整个页面内容 -->
+    <!-- 精确度的区别 -->
+    <p>The current date and time is:
+    <script type="text/javascript">
+        document.write("<strong>" + (new Date()).toString() + "</strong>");
+    </script>
+    </p>
+</body>
+</html>
+

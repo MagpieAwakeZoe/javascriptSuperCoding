@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- <link rel="stylesheet" type="text/css" href="client.css">正常加载css样式表 -->
+</head>
+<body>
+	<div id="style">
+	</div>
+
+	<!-- 利用javascript动态添加样式。通过改变link.href来改变加载的css的地址 -->
+	<script type="text/javascript">
+		var head = document.getElementById("style");
+		var link = document.createElement("link");
+		link.rel = "stylesheet";
+		link.type = "text/css";
+		link.href = "client.css";
+		head.appendChild(link);
+	</script>
+</body>
+</html>
+

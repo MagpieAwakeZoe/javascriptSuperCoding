@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- <script type="text/javascript" src="../../Utils/EventUtil.js"></script> -->
+    <script type="text/javascript" src="EventUtil.js"></script>
+    <style type="text/css">
+        #bar{
+            width: 400px;
+            margin: auto;
+            height: 2000px;
+            background-color: orange;
+        }
+    </style>
+   
+</head>
+<body>
+    <div id="bar"></div>
+    <script type="text/javascript">
+        function getScrollTop(){            //获取文档内容实际高度
+             var scrollTop=0;    
+                if(document.documentElement&&document.documentElement.scrollTop){    
+                    scrollTop=document.documentElement.scrollTop;    
+                }else if(document.body){    
+                    scrollTop=document.body.scrollTop;    
+                }    
+                    return scrollTop;    
+                } 
+    </script>
+
+
+    <script type="text/javascript">
+        var bar = document.getElementById("bar");
+        EventUtil.addHandler(window,"scroll",function(event){
+            if(window.getScrollTop() > 200){                    //距离大于200时候变成红色
+                bar.style.cssText = "background-color:red";
+            }
+        });
+        
+    </script>
+</body>
+</html>
+

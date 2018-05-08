@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+		function MyObject(){
+			//私有变量和私有方法
+			var privateVariable = 10;
+			function privateFunction(){
+				return false;
+			}
+
+			//特权方法,构造函数中定义的特权方法，只有这个方法可以访问到私有变量和私有方法
+			this.publicMethod = function(){
+				privateVariable++;
+				console.log(privateVariable);
+				return privateFunction();
+			};
+		}
+		var obj = new MyObject();
+		obj.publicMethod();
+
+		// 以下两句都会出错
+		// obj.privateVariable;			
+		// obj.privateFunction();
+    </script>
+</head>
+<body>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+	  	// 一个持有外部环境变量的函数就是闭包（「函数」和「函数内部能访问到的变量」（也叫环境）的总和，就是一个闭包。）
+	  	//典型的例子(local 变量和 bar 函数就组成了一个闭包)
+		function foo(){
+		  var local = 1		//把 local 放在一个函数里,是因为需要局部变量,不把 local 放在一个函数里，local 就是一个全局变量了，达不到使用闭包的目的——隐藏变量
+		function bar(){
+		    local++
+		    return local	
+		  }
+		  return bar		//return bar只是为了 bar 能被使用，也跟闭包无关。
+		}
+
+		var func = foo()
+		func()
+    </script>
+</head>
+<body>
+</body>
+</html>
+

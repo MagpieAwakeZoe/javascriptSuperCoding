@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="EventUtil.js"></script>
+    <style type="text/css">
+      #drag{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        margin-top: 40px;
+        margin: auto;
+        border: 1px solid black
+      }
+    </style>
+</head>
+<body>
+    <div id="drag" draggable="true"></div>                    
+    <!-- 元素必须要有draggable = true 才能被拖拽，这个是前提 -->
+    <script type="text/javascript">
+        var drag = document.getElementById("drag");
+        drag.ondragstart = function(){                      //元素刚刚被点击的时候，即将拖动
+          drag.style.cssText = "background-color:red";
+        }
+        drag.ondrag = function(){                           //元素在被拖拽的时候
+          drag.style.cssText = "background-color:green";
+        }
+        drag.ondragend = function(){                        //元素拖拽完毕静止的时候
+          drag.style.cssText = "background-color:black";
+        }
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>page</title>
+</head>
+<body>
+    <div id="father">
+        <div id="child">
+            I am a child
+        </div>
+    </div>
+
+     <script type="text/javascript">
+       var father = document.getElementById("father");
+       var child1 = document.getElementById("child");
+       var child2 = document.createElement("div");
+       child2.innerHTML = "我是第二个子节点";
+        father.insertBefore(child2,child1);    //参数分别是要插入的子节点和作为参照的节点
+    </script>
+</body>
+</html>
+

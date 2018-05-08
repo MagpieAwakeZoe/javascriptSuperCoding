@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="EventUtil.js"></script>
+</head>
+<body>
+    <div id="btn">
+   <table>
+       <thead>
+           <tr>
+               <td>按钮一</td>
+               <td>按钮二</td>
+               <td>按钮三</td>
+               <td>按钮四</td>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <td><button id="add">添加按钮</button></td>
+               <td><button id="delete">删除按钮</button></td>
+               <td><button id="move">移动按钮</button></td>
+               <td><button id="paste">粘贴按钮</button></td>
+           </tr>
+            <tr>
+               <td><button id="copy">复制按钮</button></td>
+               <td><button id="select">选择按钮</button></td>
+               <td><button id="modify">修改按钮</button></td>
+               <td><button id="edit">编辑按钮</button></td>
+           </tr>
+       </tbody>
+   </table>
+   </div>
+
+   <script type="text/javascript">
+       var btn = document.getElementById("btn");
+       EventUtil.addHandler(btn,"click",function(event){            
+       //通过给button的父级元素绑定事件，通过冒泡来给各个button元素事件，button并没有绑定事件，当冒泡时候父级div恰好有绑定事件。
+            event = EventUtil.getEvent(event);              //通过指定target来使得冒泡不会对指定元素以外的目标生效
+            var target = EventUtil.getTarget(event);        //target指的是当前点击的元素
+
+            switch(target.id){
+                case "add":
+                alert("添加");
+                break;
+                case "delete":
+                alert("删除");
+                break;
+                case "move":
+                alert("移动");
+                break;
+                case "paste":
+                alert("粘贴");
+                break;
+                case "copy":
+                alert("复制");
+                break;
+                case "select":
+                alert("选择");
+                break;
+                case "modify":
+                alert("修改");
+                break;
+                case "edit":
+                alert("编辑");
+                break;
+            }
+       });
+   </script>
+</body>
+</html>
+

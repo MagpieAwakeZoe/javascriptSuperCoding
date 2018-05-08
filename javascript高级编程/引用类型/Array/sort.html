@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方括号</title>
+    <script type="text/javascript">
+    function sortNumberUp(a,b)
+    {
+    return a - b
+    }
+
+    function sortNumberDown(a,b)
+    {
+    return b - a
+    }
+
+    var arr = new Array("10","5","40","25","1000","1");
+        console.log(arr);                                            //输出原数组
+        arr.reverse()                                                //数组倒序输出
+        console.log(arr);                                            //数组倒序输出
+        console.log(arr.sort(sortNumberUp));                         //输出数组从小到大
+        console.log(arr.sort(sortNumberDown));                       //输出数组从大到小
+
+        // 这里关系到函数作为参数传递的一个知识
+        // 当函数名后加上括号时，通常会执行函数体本身。如果函数有返回值时，此时会得到函数的返回值；
+        // 当函数名后不加括号时，其实质上是一个函数指针，只是用于找到函数体的位置，不会直接执行函数体；
+        // sort(sortNumberUp())相当于sort(true或者false);结果和sort()没区别
+        // sort(sortNumberUp)相当于把arr里的参数传递到sortNumberUp里去进行比对后的值，本身函数名就是一个指针
+    </script>
+</head>
+<body>
+</body>
+</html>
+

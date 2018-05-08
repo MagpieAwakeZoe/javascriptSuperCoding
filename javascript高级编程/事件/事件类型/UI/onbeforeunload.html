@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+    	//监听的写法
+    	function leave(event){
+    		event.returnValue = "你若离去，后会无期"
+    	}
+    	window.addEventListener('beforeunload',leave,false);
+    	//beforeunload在刷新或者页面变动的时候会跳出提示选择
+
+    	// 普通的写法
+    	// window.onbeforeunload=function(){return '确定要离开吗？'}
+    </script>
+</body>
+</html>
+

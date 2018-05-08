@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+	  	function Person(){}
+	  	Person.prototype = {				//直接给对象加上原型，避免对每个属性添加，减少工作量。
+	  		name:'jack',
+	  		age:29,
+	  		job:"software",
+	  		sayName:function(){
+	  			console.log(this.name);
+	  		}
+	  	}
+
+	  	var friend = new Person();
+	  	friend.sayName();
+    </script>
+</head>
+<body>
+</body>
+</html>
+

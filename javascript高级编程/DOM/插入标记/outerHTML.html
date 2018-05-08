@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="outer">
+    	我是外部的文字
+    	<div id="inner">
+    		我是内部的文字
+    	</div>
+    </div>
+    <script type="text/javascript">
+        var inner = document.getElementById("inner");
+        inner.outerHTML = "外部文字被改变";			//这里outerHTML包括标签在内的"<div id="inner">我是内部的文字</div>"全部被替换成"外部文字被改变"	
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>延迟脚本</title>
+</head>
+<body>
+	<!-- <button id="btn" onclick="add_onclick()">按钮</button> -->
+	<button id="btn" onclick="return add_onclick()">按钮</button>
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		function add_onclick(){
+			alert("添加了按钮");
+		}
+
+		// onClick='return add_onclick()'与 onClick='add_onclick()'的区别
+		// JAVASCRIPT在事件中调用函数时用return返回值实际上是对window.event.returnvalue进行设置。
+		// 当返回的是true时，将继续操作。当返回是false时，将中断操作。
+		// 直接执行时（不用return）。将不会对window.event.returnvalue进行设置
+		// 如果执行的函数里有return false 和return true 的话，第二种return add_onclick会在return false之后停止，而第一种return add_onclick不会有影响，继续进行
+	</script>
+</body>
+</html>

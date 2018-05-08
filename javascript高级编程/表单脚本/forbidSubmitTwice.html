@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="EventUtil.js"></script>
+</head>
+<body>
+    <div>
+      <form>
+        <input type="button" name="submit" value="提交表单" onclick="return sub()">
+      </form>
+    </div>
+   <script type="text/javascript">
+      function sub() {
+         document.forms[0].elements[0].disabled = true;         //forms[0]指的是表单数组里第一个，elements[0]指的是表单里的元素里的第一个
+         //这里使得按钮在被点击之后变灰，变得无法点击无法提交第二次
+      }
+   </script>
+</body>
+</html>
+

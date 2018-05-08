@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="EventUtil.js"></script>
+</head>
+<body>
+  <div>
+    <button id="btn">按钮</button>
+  </div>
+
+  <script type="text/javascript">
+    var handle = {
+      message:"this is a message",
+
+      handleClick:function(){
+        console.log(this.message);
+      }
+    }
+
+    var btn = document.getElementById("btn");
+    EventUtil.addHandler(btn,"click",handle.handleClick);         //这里message再handleClick外面，访问不到，this指向window,结果是Undefined
+    EventUtil.addHandler(btn,"click",function(event){
+      return handle.handleClick(event);                           //this is a message正常输出
+      //相当于闭包把原本的函数范围翻到外面去了，大家共有的数据
+    })
+
+  </script>
+</body>
+</html>
+

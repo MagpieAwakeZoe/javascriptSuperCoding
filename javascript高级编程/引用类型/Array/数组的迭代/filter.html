@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+    <script type="text/javascript">
+    	var number = Array(1,2,3,4,5,4,3,2,1);
+        var filterRes = number.filter(function(item,index,array){
+            return (item>2)                 //取大于2的数组里的元素组成新的数组
+        });
+        console.log(filterRes);             //新的数组
+    </script>
+</head>
+<body>
+</body>
+</html>
+

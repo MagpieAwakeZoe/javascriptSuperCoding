@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //定义一个 log 方法，让它可以代理 console.log 方法
+        var log =function (msg) {
+            console.log(msg);
+        };
+        log(1);             //1
+        log(1,2);           //1
+        //当传入参数的个数是不确定的时候，上面的方法就失效了
+    </script>
+
+    <!--////////////////////////////////////////////////////////////////////////////////////////-->
+
+<script>
+    //考虑使用 apply 或者 call，注意这里传入多少个参数是不确定的，所以使用apply是最好
+    function log(){
+        console.log.apply(console, arguments);
+    };
+    log(1);    //1
+    log(1,2);    //1 2
+</script>
+
+
+    <!--////////////////////////////////////////////////////////////////////////////////////////-->
+<script>
+    //接下来的要求是给每一个 log 消息添加一个"(app)"的前辍，比如：
+    //log("hello world");    //(app)hello world
+    //需要想到arguments参数是个伪数组，通过 Array.prototype.slice.call
+    // 转化为标准数组，再使用数组方法unshift，像这样：
+    function log(){
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift('(app)');
+        console.log.apply(console, args);
+    };
+    log(1,2);
+</script>
+</body>
+</html>

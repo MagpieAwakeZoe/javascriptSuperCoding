@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+ <button id="btn">按钮</button>
+  <script type="text/javascript">
+      var btn = document.getElementById("btn");
+      btn.onclick = function(event){
+        alert("clicked");
+        window.event.cancelBubble = true;            //cancelBubble = true取消冒泡，因为ie不支持事件的捕获，大体和stopPropagation()相同
+                                                // 默认事件仍然会执行
+      };
+
+      document.body.onclick = function(evnet){      //body上的事件冒泡被阻止
+        alert("Body alert");
+      }
+  </script>
+</body>
+</html>
+

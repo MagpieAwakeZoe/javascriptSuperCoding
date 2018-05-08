@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="IDV" class="idv" align="center"></div>
+    <script type="text/javascript">
+        // 获取元素节点的特性比如id,class,或者其他属性
+        var DIV = document.getElementById("IDV");
+        console.log(DIV.getAttribute("id"));            //  IDV
+        console.log(DIV.getAttribute("class"));         //  idv
+        console.log(DIV.getAttribute("align"));         //  center
+        console.log("----------------------------------------------");
+        
+
+        // 设置元素节点的特性，修改特性，比如Id,class,和其他属性
+        DIV.setAttribute("id","OtherId");
+        DIV.setAttribute("class","otherClass");
+        DIV.setAttribute("align","left");
+        console.log(DIV.getAttribute("id"));            //  OtherId
+        console.log(DIV.getAttribute("class"));         //  otherClass
+        console.log(DIV.getAttribute("align"));         //  left
+        console.log("----------------------------------------------");
+
+        //删除元素节点的特性
+        DIV.removeAttribute("class");
+        console.log(DIV.getAttribute("class"));         //  null
+    </script>
+</body>
+</html>
+

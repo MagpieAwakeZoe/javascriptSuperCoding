@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="EventUtil.js"></script>
+</head>
+<body>
+   <div>
+     <form>
+       <select name="select">
+         <option value="1">111</option>
+         <option value="2">222</option>
+         <option value="3">333</option>
+         <option value="4">444</option>
+       </select>
+     </form>
+   </div>
+   <script type="text/javascript">
+     var selectBox = document.forms[0].elements["select"];        //选取name为select的元素，elements['name'];
+     for(var i=0; i<4; i++){
+        console.log(selectBox.options[i].text);                   //打印出selectBox的文本
+        console.log(selectBox.options[i].value);                  //打印出selectBox的value
+     }
+   </script>
+</body>
+</html>
+

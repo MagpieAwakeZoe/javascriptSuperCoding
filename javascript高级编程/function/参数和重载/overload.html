@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+    <script type="text/javascript">
+        function add(num){
+            return num + 100;
+        }
+
+
+// javascript没有重载，后写的方法会覆盖前面的方法
+         function add(num){
+            return num + 200;
+        }
+
+        var result = add(100);
+        console.log(result);
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+	<div id="div">
+	</div>
+	<div class="class">
+	</div>
+	<div class="same"></div>
+	<div class="same"></div>
+	<div class="same"></div>
+	<div class="same"></div>
+	<script type="text/javascript">
+		//支持css选择符查找对象
+		var myDiv = document.querySelector("#div");				//找到id为div的元素	//返回的元素仅仅是第一个查找到的元素
+		var myClass = document.querySelector(".class");			//找到class为class的元素  //返回的元素仅仅是第一个查找到的元素
+		myDiv.innerHTML = "此元素已经被id选择器找到";				
+		myClass.innerHTML = "此元素已经被class选择器找到";
+
+		document.write("-------------------------------");
+																//querySelectorAll提取出同一类的所有元素，是一个数组
+		var All = document.querySelectorAll(".same");			//此时的All是一个数组，并不是一个对象，它选取了所有class为same的元素
+		All[0].innerHTML = "we are the same";					//提取出数组里的元素
+		All[1].innerHTML = "we are the same";	
+		All[2].innerHTML = "we are the same";	
+		All[3].innerHTML = "we are the same";	
+	</script>
+</body>
+</html>
+

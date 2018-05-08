@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    //安全的构造函数
+    function Person(name,age,job){
+      if(this instanceof Person){
+        this.name = name;
+        this.age = age;
+        this.job = job;
+      }else{
+        return new Person(name,age,job);
+      }
+    }
+
+    var person1 = new Person("Jack","18","doctor");
+    console.log(person1.name);
+    console.log(person1.age);
+    console.log(person1.job);
+    var person2 = Person("Bob","20","engineer");        //没有New使得this指向window
+    console.log(person2.name);
+    console.log(person2.age);
+    console.log(person2.job);
+  </script>
+</body>
+</html>
+

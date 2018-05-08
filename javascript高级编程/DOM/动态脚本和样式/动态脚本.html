@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+	<!-- <script type="text/javascript" src="client.js"></script> //原本放在一条是这样的-->		
+   <script type="text/javascript">
+   	var script = document.createElement("script");
+   	script.type = "text/javascript";
+   	script.src = "client.js";				//通过操作script.src的值可以动态加载不同的js
+   	document.body.appendChild(script);
+   </script>
+</body>
+</html>
+

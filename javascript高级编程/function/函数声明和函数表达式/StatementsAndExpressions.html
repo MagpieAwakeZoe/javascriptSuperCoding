@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <script type="text/javascript">
+
+    	//函数声名
+	  	var print = function(){
+	  		console.log("I am printed");
+	  	}
+	  	print();		//运行，转化为表达式
+
+
+
+	  	//也可以这么写
+	  	!function(){
+	  		console.log("I am printed again");
+	  	}();			//声明和表达式同时实现
+
+
+
+	  	//还可以这么写(匿名函数的写法，写完直接调用)
+	  	(function(){
+	  		return console.log("I am printed again and again");
+	  	})();			
+
+	  	// p212
+    </script>
+</head>
+<body>
+</body>
+</html>
+

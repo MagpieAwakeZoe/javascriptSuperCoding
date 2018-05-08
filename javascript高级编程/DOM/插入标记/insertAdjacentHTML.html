@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+	<div>XXXXX</div>
+	<div>XXXXX</div>
+   	<div id="insert">当前元素</div> 
+   	<div>XXXXX</div>
+   	<div>XXXXX</div>	
+   	<script type="text/javascript">
+   		var insert = document.getElementById("insert");
+   		insert.insertAdjacentHTML("beforebegin","<p>beforebegin</p>");				//在当前元素前面插入内容
+   		insert.insertAdjacentHTML("afterbegin","<p>afterbegin</p>");				//在当前元素前面插入内容
+   		insert.insertAdjacentHTML("beforeend","<p>beforeend</p>");					//在当前元素前面插入内容
+   		insert.insertAdjacentHTML("afterend","<p>afterend</p>");					//在当前元素前面插入内容
+   	</script>
+</body>
+</html>
+

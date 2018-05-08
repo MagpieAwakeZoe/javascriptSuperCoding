@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+    <script type="text/javascript">
+	    var num = Math.random();		//获得一个0-1之间的随机小数
+	    console.log(num);		
+	    console.log("---------------------------");
+
+
+	    function selectFrom(lowerValue,upperValue){
+	    	var choice = upperValue - lowerValue + 1;
+	    	return Math.floor(Math.random() * choice + lowerValue);
+	    }
+	    var colors = ['red','blue','black','pink','orange','green','brown'];
+	    console.log(colors.length);								//7
+	    var color = colors[selectFrom(0,colors.length-1)];		//从数组里随机取一个元素
+	    console.log(colors);
+	    console.log(color);
+    </script>	
+</head>
+<body>
+</body>
+</html>
+
